@@ -1,0 +1,139 @@
+.login{
+    max-width: 1920px;
+    /*height: auto;*/
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    color: #878787;
+}
+.nav-login{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+    margin: 40px auto;
+
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.nav-login>button{
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 40px;
+}
+
+.nav-login>button:hover{
+    background-color: #0062cc;
+}
+
+
+.login-page h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+label {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+button[type="submit"] {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button[type="submit"]:hover {
+    background-color: #0069d9;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.registration-page h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.registration-page form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 400px;
+}
+
+.registration-page .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.registration-page label {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.registration-page input[type="text"],
+.registration-page input[type="tel"],
+.registration-page input[type="password"] {
+    padding: 10px;
+    font-size: 1.2em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.registration-page button[type="submit"] {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.registration-page button[type="submit"]:hover {
+    background-color: #0062cc;
+}

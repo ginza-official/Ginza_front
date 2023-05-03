@@ -1,0 +1,27 @@
+html{
+
+}
+body{
+    background-color: #ffffff;
+    width: 100%;
+
+    cursor: default;
+
+
+}
+*{
+    box-sizing: border-box;
+    color: #000000;
+    text-decoration: none;
+
+}
+.main{
+    max-width: 1920px;
+    /*height: auto;*/
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    color: #878787;
+}
+

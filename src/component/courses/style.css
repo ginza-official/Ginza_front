@@ -1,0 +1,189 @@
+.navbar2{
+    display: flex;
+    justify-content:space-between;
+    margin: 0 auto;
+    padding: 5px;
+    width: 96%;
+    height: 60px;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+}
+
+.courses-single{
+    max-width: 1920px;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    color: #878787;
+}
+
+.single-course-section{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 30px;
+    margin-bottom: 60px;
+
+}
+.main-left{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    justify-content: center;
+
+}
+
+
+
+.course-img{
+    width: 90%;
+    margin: 0 auto;
+}
+.course2-cards{
+    margin: 10px auto;
+    width:90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    height: auto;
+
+}
+.course2-card{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #d8d8d8;
+    border: 1px solid #d8d8d8;
+    border-radius: 10px;
+    padding: 0 10px;
+}
+
+.course2-card-right{
+    display: flex;
+    flex-direction: row;
+    width: 25%;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.btn-play-video1{
+    color: #ffffff;
+    background-color: rgb(66, 66, 67,80%);
+    font-size: 14px;
+    transition-duration: 0.2s;
+    border-radius: 10px;
+    padding: 5px 20px;
+    cursor: pointer;
+
+}
+.btn-play-video1:hover{    color: white;
+    background-color: rgb(66, 66, 67,60%);
+    transition: all 0.2s ease-in-out;
+    box-shadow: rgb(248, 248, 248) 0px 0px 0px 2px;
+    border-radius: 10px;
+    padding: 5px 25px;
+
+}
+.iframe-course{
+    width: 80%;
+    height: auto;
+    position: fixed;
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    transition-duration: 2s;
+    background-color: rgb(0, 0, 0);
+    box-shadow: black;
+}
+.popup-iframe video {
+    margin: 10px auto;
+    width: 100%;
+    height: 90%;
+    border: none;
+    z-index: 100;
+    cursor: none;
+
+}
+.popup-iframe video:hover{
+    z-index: 90;
+    cursor: none;
+    box-shadow: 0 0 30px 0 rgb(0, 0, 0);
+    transition-duration: 2s;
+}
+
+/*##############################right section#######################*/
+
+
+
+.main-right{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    padding: 10px  30px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+
+
+
+#customers {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04a96c;
+    color: white;
+}
+.button-course{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.button-course:hover{
+    box-shadow: rgb(0, 255, 164) 0px 0px 0px 2px;
+    transform:scale(1.1);
+}
+
+
+
+
+
