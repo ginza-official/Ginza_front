@@ -4,13 +4,13 @@ import '../homepage/style.css'
 import './style.css'
 import '../main.css'
 import {Link} from "react-router-dom";
-import React,{useEffect,useState}     from "react";
+import React, {useEffect, useState} from "react";
 import jwt_decode from "jwt-decode";
-import { useNavigate } from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 
 
 function LoginPage() {
-    const [username, setUsername] = useState('');
+    const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
     const [error, setError] = React.useState("");
@@ -30,14 +30,16 @@ function LoginPage() {
     };
     const handleSubmit = (e) => {
         e.preventDefault();
-        fetch('http://localhost:8000/auth/token/', {
-            method: 'POST',
-            headers: {
+        // console.log('Email:', email);
+        // console.log('Password:', password);
+        fetch('http://localhost:8000/token/', {
+            method: 'POST', headers: {
                 'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                username: username,
+            }, body: JSON.stringify({
+
+                email: email,
                 password: password
+
             })
         })
             .then(response => {
@@ -65,11 +67,9 @@ function LoginPage() {
                 // Try to refresh the token if an error occurs
                 if (error.message === 'Authentication failed.') {
                     fetch('http://localhost:8000/auth/token/refresh/', {
-                        method: 'POST',
-                        headers: {
+                        method: 'POST', headers: {
                             'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify({
+                        }, body: JSON.stringify({
                             refresh: localStorage.getItem('refresh_token')
                         })
                     })
@@ -94,16 +94,16 @@ function LoginPage() {
 
     }
 
-    return (
-        <div className={'login'}>      {/*eslint-disable*/}
+    return (<div className={'login'}>      {/*eslint-disable*/}
             <div className="login-page">
                 <div className="Nav">
                     <div className="navbar">
                         <Link to="/">
                             <div className="logo">
-                                <img src={logo} alt="logo" />
+                                <img src={logo} alt="logo"/>
                                 <h1>Ginza</h1>
-                            </div></Link>
+                            </div>
+                        </Link>
 
                         <div className="nav-items">
                             <ul>
@@ -114,17 +114,18 @@ function LoginPage() {
                     </div>
                 </div>
                 <div className={'login-form'}>
-                    <h1 style={{color:'black'}}>Login</h1>
+                    <h1 style={{color: 'black'}}>Login</h1>
                     <form onSubmit={handleSubmit}>
                         <div className="form-group">
-                            <label htmlFor="username">Username or Email or Phone:</label>
-                            <input type="text" id="username"
+                            <label htmlFor="email">Email :</label>
+                            <input type="email" id="email"
                                    placeholder={'Enter your username or email or phone'}
-                                   value={username} onChange={(e) => setUsername(e.target.value)} />
+                                   value={email} onChange={(e) => setEmail(e.target.value)}/>
                         </div>
                         <div className="form-group">
                             <label htmlFor="password">Password:</label>
-                            <input type="password" placeholder={'password'} id="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+                            <input type="password" placeholder={'password'} id="password" value={password}
+                                   onChange={(e) => setPassword(e.target.value)}/>
                         </div>
                         <button className={'login-button'} type="submit">Login</button>
                     </form>

@@ -1,29 +1,29 @@
 //eslint-disable
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import logo from "../homepage/icons/g.png";
 import '../homepage/style.css'
 import './style.css'
 import '../main.css'
-import {Link} from "react-router-dom";
-
+import {Link, useNavigate} from "react-router-dom";
+import jwt_decode from "jwt-decode";
 
 
 function RegistrationPage() {
-    const [fullName, setFullName] = useState('');
-    const [phone, setPhone] = useState('');
+    const [username, setUsername] = useState('');
+    const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [retypePassword, setRetypePassword] = useState('');
-
+    const navigate = useNavigate();
     const handleSubmit = (event) => {
         event.preventDefault();
 
         // Perform form validation
-        if (fullName.trim() === '') {
+        if (username.trim() === '') {
             alert('Iltimos, toʻliq ismingizni kiriting');
             return;
         }
 
-        if (phone.trim() === '') {
+        if (email.trim() === '') {
             alert('Iltimos, telefon raqamingizni kiriting');
             return;
         }
@@ -38,14 +38,51 @@ function RegistrationPage() {
             return;
         }
 
+
         // Submit registration form
-        console.log('Full Name:', fullName);
-        console.log('Phone Number:', phone);
-        console.log('Password:', password);
+        // console.log('Username:', username);
+        // console.log('Email:', email);
+        // console.log('Password:', password);
+
+
+         fetch('http://127.0.0.1:8000/register/',{
+            method: 'POST', headers: {
+                'Content-Type': 'application/json'
+            }, body: JSON.stringify({
+                name: username,
+                email: email,
+                password: password
+            })
+        })
+            .then(response => {
+                if (response.ok) {
+                    navigate('/');
+                    alert("login succesfull!!!")
+                    localStorage.setItem('username', username);
+                    localStorage.setItem('email', email);
+                    localStorage.setItem('password', password);
+
+                    return response.json();
+                } else {
+                    throw new Error('Registration failed.');
+
+                }
+            })
+
+
+            // .then(data => {
+            //     // Store the token in local storage or a cookie
+            //     console.log(data.access);
+            //     localStorage.setItem('access_token', data.access);
+            //     setToken(data.access);
+            //     console.log(jwt_decode(data.access));
+            //     navigate('/');
+            //     alert("login succesfull!!!")
+            // })
+
 
         // Reset form fields
-        setFullName('');
-        setPhone('');
+        setUsername('');
         setPassword('');
         setRetypePassword('');
     };
@@ -58,9 +95,10 @@ function RegistrationPage() {
                     <div className="navbar">
                         <Link to="/">
                             <div className="logo">
-                                <img src={logo} alt="logo" />
+                                <img src={logo} alt="logo"/>
                                 <h1>Ginza</h1>
-                            </div></Link>
+                            </div>
+                        </Link>
                         <div className="nav-items">
                             <ul>
                                 <li><Link className={'login_button'} to="/login">Login</Link></li>
@@ -71,28 +109,29 @@ function RegistrationPage() {
                     </div>
                 </div>
                 <div className={'login-form'}>
-                    <h1 style={{color:'black'}}>Registration</h1>
+                    <h1 style={{color: 'black'}}>Registration</h1>
                     <form onSubmit={handleSubmit}>
                         <div className="form-group">
                             <label htmlFor="fullName">Full Name</label>
                             <input
                                 type="text"
-                                id="fullName"
-                                value={fullName}
-                                placeholder={'Full Name'}
-                                onChange={(event) => setFullName(event.target.value)}
+                                id="username"
+                                value={username}
+                                placeholder={'Username'}
+                                onChange={(event) => setUsername(event.target.value)}
                             />
                         </div>
                         <div className="form-group">
-                            <label htmlFor="phone">Phone Number</label>
+                            <label htmlFor="phone">Email</label>
                             <input
-                                type="tel"
-                                id="phone"
-                                value={phone}
-                                placeholder={'ex: 90 004 64 65'}
-                                onChange={(event) => setPhone(event.target.value)}
+                                type="email"
+                                id="gmail"
+                                value={email}
+                                placeholder={'ex: ginza@gmail.com'}
+                                onChange={(event) => setEmail(event.target.value)}
                             />
                         </div>
+
                         <div className="form-group">
                             <label htmlFor="password">Password</label>
                             <input
@@ -113,7 +152,7 @@ function RegistrationPage() {
                                 onChange={(event) => setRetypePassword(event.target.value)}
                             />
                         </div>
-                        <button  className={'login-button'} type="submit">Register</button>
+                        <button className={'login-button'} type="submit">Register</button>
                     </form>
                 </div>
             </div>
@@ -123,4 +162,5 @@ function RegistrationPage() {
 
     );
 }
+
 export default RegistrationPage;

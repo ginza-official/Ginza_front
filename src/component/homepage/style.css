@@ -1,5 +1,5 @@
 
-.Nav{
+.Nav {
     display: flex;
     flex-wrap: wrap;
     position: sticky;
@@ -8,14 +8,14 @@
     top: 0;
     left: 0;
     right: 0;
-    background-color: rgb(66, 66, 67 , 98%);
+    background-color: rgb(66, 66, 67, 98%);
     box-shadow: 0 5px 5px 5px rgba(246, 246, 246, 0.1);
 
 }
 
-.navbar{
+.navbar {
     display: flex;
-    justify-content:center;
+    justify-content: center;
     margin: 0 auto;
     padding: 5px;
     width: 80%;
@@ -25,10 +25,9 @@
     align-items: center;
 
 
-
 }
 
-.logo{
+.logo {
     display: flex;
     padding: 10px;
     flex-direction: row;
@@ -38,11 +37,13 @@
     cursor: pointer;
     margin: 0 20px;
 }
-.logo >img{
+
+.logo > img {
     max-height: 40px;
 
 }
-.user-logo-list{
+
+.user-logo-list {
     display: flex;
     flex-direction: row;
     list-style: none;
@@ -51,13 +52,13 @@
 
 }
 
-.user-logo{
+.user-logo {
     max-height: 30px;
 
 }
 
 
-.logo >h1{
+.logo > h1 {
     color: #d8d8d8;
     font-size: 30px;
     font-weight: 500;
@@ -66,12 +67,13 @@
     margin-left: 10px;
 
 }
-.logo >h1:hover{
+
+.logo > h1:hover {
     color: #ffffff;
 
 }
 
-.nav-items >ul{
+.nav-items > ul {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -82,7 +84,8 @@
     list-style: none;
     margin: 0 20px;
 }
-.nav-items >ul >li{
+
+.nav-items > ul > li {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -93,42 +96,48 @@
     margin: 0 20px;
 
 }
-.nav-items >ul >li >a{
+
+.nav-items > ul > li > a {
     text-decoration: none;
     color: #d8d8d8;
     font-size: 17px;
     font-family: 'Roboto', sans-serif;
     transition: all 0.3s ease-in-out;
 }
-.nav-items >ul >li >a:hover{
+
+.nav-items > ul > li > a:hover {
     color: #ffffff;
     transition: all 0.3s ease-in-out;
 }
-.nav-items >ul >li >a:active{
+
+.nav-items > ul > li > a:active {
     color: #ffffff;
     transition: all 0.3s ease-in-out;
 }
-.login_button{
+
+.login_button {
     border: 1px solid #c8d6d6;
     color: #c8d6d6;
     border-radius: 10px;
     align-items: center;
     padding: 5px 10px;
 }
-.logout_button{
+
+.logout_button {
     border: 1px solid #c8d6d6;
     color: #ffffff;
     border-radius: 10px;
     align-items: center;
     padding: 5px 10px;
 }
-.logout_button:hover{
+
+.logout_button:hover {
     border: 1px solid #ffffff;
     color: #ffffff;
     transition: all 0.3s ease-in-out;
 }
 
-.login_button:hover{
+.login_button:hover {
     border: 1px solid #ffffff;
     color: #ffffff;
     transition: all 0.3s ease-in-out;
@@ -136,7 +145,7 @@
 
 
 /*####################3*/
-.main-cointainer{
+.main-cointainer {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -145,7 +154,8 @@
     height: auto;;
     background-color: #ffffff;
 }
-.main-img{
+
+.main-img {
     width: 100%;
     cursor: pointer;
 }
@@ -154,29 +164,32 @@
 /*######################3subscriber####################*/
 
 
-.subscriber-content{
+.subscriber-content {
     margin-top: 50px;
     display: flex;
     align-items: center;
-    justify-content:space-between;
+    justify-content: space-between;
     width: 100%;
     height: auto;
     flex-direction: row;
     padding: 20px;
 }
-.subs-text{
-    display: flex;
-    width:50%;
-    height: auto;
-    margin: 0;
-}
-.subs-text-half{
+
+.subs-text {
     display: flex;
     width: 50%;
     height: auto;
     margin: 0;
 }
-.sub{
+
+.subs-text-half {
+    display: flex;
+    width: 50%;
+    height: auto;
+    margin: 0;
+}
+
+.sub {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -185,29 +198,31 @@
     width: 50%;
     height: auto;
 }
-.sub>h1{
+
+.sub > h1 {
     font-size: 2.5rem;
-    font-family: "Arial Black" , sans-serif;
+    font-family: "Arial Black", sans-serif;
     color: #454546;
     margin-bottom: 0;
 }
-.sub>p{
+
+.sub > p {
     font-size: 1.2rem;
-    font-family:  sans-serif;
+    font-family: sans-serif;
     color: #454546;
     padding-top: 0;
 }
 
-.subs-text-h2{
+.subs-text-h2 {
     font-size: 2rem;
-    font-family: "Arial Black" , sans-serif;
+    font-family: "Arial Black", sans-serif;
     color: #454546;
 
 }
 
 /*#################################courses####################################*/
 
-.courses{
+.courses {
 
     width: 100%;
     margin: 0;
@@ -218,7 +233,8 @@
     background-repeat: no-repeat;
     background-position: center;
 }
-.cards{
+
+.cards {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -227,10 +243,9 @@
     gap: 10px;
 
 
-
-
 }
-.card{
+
+.card {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -248,52 +263,59 @@
 
 
 }
-.imgs{
+
+.imgs {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
-.img1{
+
+.img1 {
     background-image: url("./img/pxfuel.jpg");
 
 }
-.img2{
+
+.img2 {
     background-image: url("./img/pxfuel (1).jpg");
 
 }
-.img3{
+
+.img3 {
     background-image: url("./img/bag2.jpg");
 
 }
-.img4{
+
+.img4 {
     background-image: url("./img/aaa.jpg");
 
 }
 
 
-.card:hover{
+.card:hover {
     box-shadow: 0px 0px 30px 0px rgb(255, 255, 255);
-    background-color: rgb(66, 66, 67 , 90%);
+    background-color: rgb(66, 66, 67, 90%);
     transform: scale(1.08);
 
 
 }
-.card>h2{
+
+.card > h2 {
     color: #454546;
     font-size: 1.2rem;
     transition: transform .6s;
     background-color: #d6d6d6;
-    font-family: "Arial Black",sans-serif;
+    font-family: "Arial Black", sans-serif;
     padding: 10px;
     border-radius: 10px;
 
 }
-.card>h2:hover{
+
+.card > h2:hover {
     color: #000000;
 
 }
 
-.about{
+.about {
     width: 100%;
     height: auto;
     padding: 20px;
@@ -307,7 +329,8 @@
 
 
 }
-.about-content{
+
+.about-content {
     display: flex;
     width: 100%;
     height: auto;
@@ -315,32 +338,36 @@
     justify-content: space-between;
     align-items: center;
     align-content: center;
-    padding: 5px ;
+    padding: 5px;
     padding-right: 8rem;
     margin: 10px;
 
 }
-.about-text{
+
+.about-text {
     display: flex;
     width: 100%;
     flex-direction: column;
     justify-content: space-between;
 }
-.about-text>p{
+
+.about-text > p {
     letter-spacing: 3px;
 }
-.about-text>h2{
+
+.about-text > h2 {
     letter-spacing: 2px;
     font-size: 2rem;
     opacity: 80%;
-    font-family:   sans-serif;
+    font-family: sans-serif;
     color: #454546;
     margin-bottom: 40px
 }
-.about-text>button{
+
+.about-text > button {
     text-decoration: none;
     color: #ffffff;
-    background-color: rgb(66, 66, 67,0.8);
+    background-color: rgb(66, 66, 67, 0.8);
     font-size: 17px;
     transition-duration: 2s;
     border-radius: 10px;
@@ -348,7 +375,8 @@
     max-width: 130px;
 
 }
-.about-text>button:hover{
+
+.about-text > button:hover {
     color: white;
     background-color: rgba(106, 106, 107, 0.6);
     transition: all 0.8s ease-in-out;
@@ -359,29 +387,31 @@
 
 }
 
-.about-video{
+.about-video {
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer ;
+    cursor: pointer;
 }
 
-.about-video>.iframe{
+.about-video > .iframe {
 
     width: 500px;
-    height:auto ;
+    height: auto;
     max-height: 400px;
     min-height: 240px;
     border-radius: 15px;
     box-shadow: 0 0 60px 0 rgb(98, 97, 97);
     transition: all 0.8s ease-in-out;
-    cursor: pointer ;
+    cursor: pointer;
 
 }
-.about-video>.iframe:hover{
+
+.about-video > .iframe:hover {
     transform: scale(1.05);
     box-shadow: 0 0 30px 0 rgb(187, 187, 187);
 }
+
 .popup-iframe {
     width: 100%;
     height: 100%;
@@ -399,10 +429,10 @@
 
 }
 
-.popup-back-top{
+.popup-back-top {
     z-index: 91;
     position: fixed;
-    display:flex;
+    display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     width: 100%;
@@ -413,20 +443,19 @@
 }
 
 
-
-.popup-back-flex{
-    display:flex;
+.popup-back-flex {
+    display: flex;
     justify-content: center;
     width: 100%;
     transition-duration: 5s;
 }
 
 
-.popup-back{
+.popup-back {
     display: inline-block;
     text-align: center;
     align-content: center;
-    font-family: "Arial Black" ,sans-serif;
+    font-family: "Arial Black", sans-serif;
     font-size: 20px;
     border-radius: 20px;
     padding: 5px 90px;
@@ -439,7 +468,8 @@
 
 
 }
-.popup-back:hover{
+
+.popup-back:hover {
     transform: scale(1.05);
     box-shadow: 0 0 30px 0 rgb(187, 187, 187);
     transition-duration: 2s;
@@ -453,7 +483,8 @@
     z-index: 100;
 
 }
-.popup-iframe iframe:hover{
+
+.popup-iframe iframe:hover {
     z-index: 90;
     cursor: pointer;
     box-shadow: 0 0 30px 0 rgb(0, 0, 0);
@@ -462,7 +493,7 @@
 
 
 /*####################3*/
-.jobs{
+.jobs {
     width: 100%;
     height: auto;
     padding: 20px;
@@ -475,7 +506,8 @@
 
 
 }
-.jobs-content{
+
+.jobs-content {
     display: flex;
     width: 100%;
     height: auto;
@@ -483,38 +515,42 @@
     justify-content: space-between;
     align-items: center;
     align-content: center;
-    padding: 5px ;
+    padding: 5px;
 
 }
-.jobs-text{
+
+.jobs-text {
     display: flex;
     width: 100%;
     flex-direction: column;
     justify-content: space-between;
 }
-.jobs-text>p{
+
+.jobs-text > p {
     letter-spacing: 3px;
 }
-.jobs-type{
+
+.jobs-type {
     display: flex;
     width: 80%;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     align-content: center;
-    padding: 10px 50px ;
+    padding: 10px 50px;
     flex-wrap: wrap;
     gap: 30px;
     margin-bottom: 30px;
 
 }
-.jobs-type>button{
+
+.jobs-type > button {
     padding: 10px 20px;
     border-radius: 10px;
     border: 1px solid #8a8989;
     color: #717175;
     font-size: 0.7rem;
-    font-family:   sans-serif;
+    font-family: sans-serif;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     box-shadow: 0 0 5px 0 rgb(98, 97, 97);
@@ -522,26 +558,28 @@
 
 
 }
-.jobs-type>button:hover{
+
+.jobs-type > button:hover {
     transition-duration: 0.3s;
     transform: scale(1.3);
     border: 1px solid #8a8989;
     box-shadow: 0 0 15px 0 rgb(98, 97, 97);
 }
 
-.jobs-cards{
+.jobs-cards {
     display: flex;
     width: 100%;
     flex-direction: row;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
     align-content: center;
-    padding: 10px 50px ;
+    padding: 10px 50px;
     flex-wrap: wrap;
     gap: 40px;
 
 }
-.job-card{
+
+.job-card {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -565,40 +603,43 @@
 
 
 }
-.job-card p{
+
+.job-card p {
     font-size: 14px;
 
-    font-family:   sans-serif;
+    font-family: sans-serif;
     font-weight: 500;
     margin-top: 15px;
     color: #ffffff;
-    background-color: rgb(66, 66, 67,90%);
+    background-color: rgb(66, 66, 67, 90%);
     border-radius: 10px;
     padding: 5px;
 
 
-
 }
-.job-card h3{
+
+.job-card h3 {
     color: #f8f8f8;
-    background-color: rgb(66, 66, 67,80%);
+    background-color: rgb(66, 66, 67, 80%);
     border-radius: 10px;
     padding: 5px;
 
 
 }
-.job-card a{
+
+.job-card a {
     text-decoration: none;
     color: #ffffff;
-    background-color: rgb(66, 66, 67,80%);
+    background-color: rgb(66, 66, 67, 80%);
     font-size: 17px;
     transition-duration: 3s;
     border-radius: 10px;
     padding: 5px;
 }
-.job-card a:hover{
+
+.job-card a:hover {
     color: white;
-    background-color: rgb(66, 66, 67,60%);
+    background-color: rgb(66, 66, 67, 60%);
     transition: all 0.4s ease-in-out;
     box-shadow: rgb(248, 248, 248) 0px 0px 0px 2px;
     border-radius: 25px;
@@ -606,8 +647,7 @@
 }
 
 
-
-.job-card:hover{
+.job-card:hover {
     transform: scale(1.1);
     border: 1px solid #8a8989;
     box-shadow: 0px 0px 40px 0px rgb(162, 162, 166);
@@ -615,19 +655,21 @@
     transition: all 0.4s ease-in-out;
 
 }
-.job-card >h2{
+
+.job-card > h2 {
     color: #d3d5d7;
     font-size: 1.5rem;
     transition: transform 1s;
 }
-.job-card >h2:hover{
+
+.job-card > h2:hover {
     color: #ffffff;
 
 }
 
 /*################################kurslar############################################*/
 
-.kurslar{
+.kurslar {
     width: 100%;
     height: auto;
     margin-top: 20px;
@@ -638,7 +680,7 @@
 
 }
 
-.kurslar-type{
+.kurslar-type {
     display: flex;
     width: 100%;
     justify-content: center;
@@ -647,21 +689,22 @@
     flex-direction: row;
     flex-wrap: wrap;
     gap: 40px;
-    padding: 10px ;
+    padding: 10px;
 }
-.kurslar>h1{
+
+.kurslar > h1 {
     letter-spacing: 3px;
     font-size: 2.2rem;
     opacity: 80%;
-    font-family:   sans-serif;
+    font-family: sans-serif;
     color: #323233;
     margin-bottom: 40px
 }
 
 
-.kurslar-type>button {
+.kurslar-type > button {
 
-    border:none;
+    border: none;
     outline: none;
     background: none;
     border-bottom: 2px solid #8a8989;
@@ -673,16 +716,18 @@
     cursor: pointer;
     transition: all 0.3s ease-in-out;
 }
-.kurslar-type>button:hover{
+
+.kurslar-type > button:hover {
     border-bottom: 2px solid #000000;
 }
-.kurslar-type>button:active{
+
+.kurslar-type > button:active {
     transform: scale(1.1);
     border-bottom: 2px solid #444445;
 }
 
 /*################################################################*/
-.kurslar-cards{
+.kurslar-cards {
     width: 100%;
     padding-top: 30px;
     display: flex;
@@ -692,14 +737,15 @@
     gap: 30px;
 
 }
-.kurslar-card{
+
+.kurslar-card {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     text-align: start;
     justify-content: space-between;
     max-width: 310px;
-    height:auto;
+    height: auto;
     margin-bottom: 0;
     border-radius: 10px;
     padding: 5px;
@@ -707,14 +753,16 @@
     border: 1px dashed rgb(135, 135, 135);
 
 }
-.kurslar-card>img{
+
+.kurslar-card > img {
     max-width: 300px;
     max-height: 150px;
     border-radius: 10px;
     margin: 5px auto;
 
 }
-.kurslar-card-p1{
+
+.kurslar-card-p1 {
     font-size: 1rem;
     font-family: Gadget, sans-serif;
     font-weight: bold;
@@ -722,34 +770,39 @@
     margin: 5px 0;
     text-transform: capitalize;
 }
-.kurslar-card-p2{
+
+.kurslar-card-p2 {
     font-size: 0.8rem;
-    font-family:  Ubuntu, sans-serif;
+    font-family: Ubuntu, sans-serif;
     color: #878787;
     text-transform: lowercase;
 }
-.kurslar-card-h2{
+
+.kurslar-card-h2 {
     font-size: 1.3rem;
-    font-family:  Ubuntu, sans-serif;
+    font-family: Ubuntu, sans-serif;
     color: #3a3939;
     text-transform: capitalize;
     letter-spacing: 1px;
 
 }
-.kurslar-card-p3{
+
+.kurslar-card-p3 {
     font-size: 0.8rem;
-    font-family:  Ubuntu, sans-serif;
+    font-family: Ubuntu, sans-serif;
     color: #4f4e4e;
     letter-spacing: 1px;
     margin: 5px 0;
 }
-.kurslar-card-p4{
+
+.kurslar-card-p4 {
     font-size: 1rem;
-    font-family:  "Arial Black", sans-serif;
+    font-family: "Arial Black", sans-serif;
     color: #424243;
     margin: 5px 0;
 }
-.kurslar-card-button{
+
+.kurslar-card-button {
     color: #424243;
     font-size: 1rem;
     font-family: "Arial Black", Gadget, sans-serif;
@@ -760,7 +813,8 @@
     border-radius: 10px;
     padding: 3px 15px;
 }
-.kurslar-card-button:hover{
+
+.kurslar-card-button:hover {
 
     box-shadow: 0 0px 10px 0px rgb(66, 66, 67);
     transform: scale(0.9);
@@ -769,17 +823,18 @@
 
 /*#################################contact##############################################*/
 
-.contact-forms{
+.contact-forms {
     width: 100%;
     height: auto;
     margin-top: 20px;
-    background-image: url("./img/eve.jpg") ;
+    background-image: url("./img/eve.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 
 
 }
-.contact-form{
+
+.contact-form {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -789,9 +844,10 @@
     height: 100%;
     padding: 40px;
     margin-top: 20px;
-    background-color: rgb(66, 66, 67 , 70%);
+    background-color: rgb(66, 66, 67, 70%);
 }
-.contact-form-text{
+
+.contact-form-text {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -802,23 +858,26 @@
     padding: 10px;
     margin: 20px;
 }
-.contact-form-text-h1{
+
+.contact-form-text-h1 {
     color: #d8d8d8;
-    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif ;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
     font-size: 2.5rem;
-    background-color: rgb(66, 66, 67 , 70%);
+    background-color: rgb(66, 66, 67, 70%);
     border-radius: 10px;
     padding: 20px;
 }
-.contact-form-text-p{
+
+.contact-form-text-p {
     color: white;
     letter-spacing: 1px;
-    background-color: rgb(66, 66, 67 , 70%);
-    border-radius:10px;
+    background-color: rgb(66, 66, 67, 70%);
+    border-radius: 10px;
     padding: 20px;
 
 }
-.contact-form-input{
+
+.contact-form-input {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -827,29 +886,31 @@
     height: 100%;
     padding: 40px;
     margin-top: 30px;
-    background-color: rgb(69, 69, 70,50%);
+    background-color: rgb(69, 69, 70, 50%);
     border-radius: 10px;
     color: black;
 }
 
-.contact-form-input>button{
+.contact-form-input > button {
     align-items: center;
     align-content: center;
     padding: 10px 30px;
     margin-top: 20px;
     border-radius: 10px;
-    background-color: rgb(216, 216, 216 ,130%) ;
+    background-color: rgb(216, 216, 216, 130%);
     color: #000000;
     cursor: pointer;
     transition-duration: 0.5s;
 }
-.contact-form-input>button:hover {
+
+.contact-form-input > button:hover {
     background-color: rgb(216, 216, 216, 100%);
     transform: scale(1.1);
     transition-duration: 0.5s;
     box-shadow: 0 0 30px 0 rgb(175, 172, 172);
 }
-.contact-form-input>input{
+
+.contact-form-input > input {
     width: 100%;
     height: 40px;
     border-radius: 10px;
@@ -860,17 +921,18 @@
     color: black;
     font-size: 16px;
 }
-.contact-form-input>p{
+
+.contact-form-input > p {
     color: white;
     font-size: 0.8rem;
-    font-family:  Ubuntu, sans-serif;
+    font-family: Ubuntu, sans-serif;
     letter-spacing: 1px;
     margin: 15px 0;
 }
 
 
 /*############################footer##############################################*!*/
-.footer{
+.footer {
     width: 100%;
     height: 400px;
     display: flex;
@@ -884,14 +946,13 @@
     margin-bottom: 20px;
     background-image: url("./icons/footer.jpg");
     background-repeat: no-repeat;
-    background-position:center;
-
+    background-position: center;
 
 
 }
 
 
-.footer-section{
+.footer-section {
     display: flex;
     width: 25%;
     flex-direction: column;
@@ -902,7 +963,8 @@
     margin: 20px;
 
 }
-.title{
+
+.title {
     text-decoration: none;
     color: #000000;
     font-size: 20px;
@@ -912,7 +974,7 @@
 
 }
 
-.text-title{
+.text-title {
     text-decoration: none;
     letter-spacing: 2px;
     color: #101010;
@@ -923,10 +985,12 @@
     padding: 0;
     margin: 5px;
 }
-.log{
+
+.log {
     padding-left: 30px;
 }
-.iconss{
+
+.iconss {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -936,14 +1000,16 @@
     height: auto;
 
 }
-.icon1{
+
+.icon1 {
     max-width: 40px;
     max-height: 40px;
     margin: 10px 60px;
     transition: all 0.3s ease-in-out;
     opacity: 0.7;
 }
-.icon1:hover{
+
+.icon1:hover {
     transform: scale(1.4);
     opacity: 0.8;
     cursor: pointer;
@@ -952,7 +1018,7 @@
 
 /*########################################login##################################*/
 
-.login-form{
+.login-form {
     width: 100%;
     height: auto;
     display: flex;
@@ -963,16 +1029,17 @@
     margin-top: 80px;
 
 
-
 }
-.form-group{
+
+.form-group {
     width: 100%;
     display: flex;
     padding: 10px;
     flex-direction: column;
     justify-content: center;
 }
-.form-group>label{
+
+.form-group > label {
     min-width: 300px;
     color: #000000;
     font-size: 1.2rem;
@@ -980,7 +1047,7 @@
     margin: 10px 0;
 }
 
-.form-group>input{
+.form-group > input {
     width: 100%;
     height: 40px;
     border-radius: 10px;
@@ -993,13 +1060,14 @@
     font-family: 'Roboto', sans-serif;
     font-weight: 510;
 }
-.login-button{
+
+.login-button {
     align-items: center;
     align-content: center;
     padding: 10px 30px;
     margin-top: 20px;
     border-radius: 10px;
-    background-color: rgb(216, 216, 216 ,130%) ;
+    background-color: rgb(216, 216, 216, 130%);
     color: #000000;
     cursor: pointer;
 }

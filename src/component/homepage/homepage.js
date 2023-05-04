@@ -27,18 +27,7 @@ import img7 from './img/11.png'
 import img8 from './img/b2.jpg'
 import jwt_decode from "jwt-decode";
 import user_icon from './icons/user.png'
-// import { useNavigate } from 'react-router-dom';
-
-
-
-
-
-
-
-
-
-
-
+import {useNavigate} from 'react-router-dom';
 
 
 function Homepage() {
@@ -46,14 +35,28 @@ function Homepage() {
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const [items, setItems] = useState([]);
+    const navigate = useNavigate();
     // user  qismi
-    // const navigate = useNavigate();
     const [user, setUser] = useState(null);
+    const [authenticated, setAuthenticated] = useState(false);
+
+
     useEffect(() => {
         const token = localStorage.getItem('access_token');
-        if (token) {
+        const user_local = localStorage.getItem('username');
+        console.log("49   ", token)
+        console.log("50   ", user_local)
+
+        if (user_local) {
+            setUser(user_local);
+            setAuthenticated(true)
+
+        }else if (token) {
             const decodedToken = jwt_decode(token);
-            setUser(decodedToken.username);
+            console.log(decodedToken)
+            setUser(decodedToken.name);
+            setAuthenticated(true)
+            // console.log(user)
         } else {
             setUser(null);
         }
@@ -61,8 +64,12 @@ function Homepage() {
 
     const handleLogout = () => {
         localStorage.removeItem('access_token');
+        localStorage.removeItem('username')
+        localStorage.removeItem('password')
+        localStorage.removeItem('email')
         setUser(null);
-        // navigate('/');
+
+        navigate('/');
 
     };
 
@@ -109,26 +116,24 @@ function Homepage() {
                             <li><a href={"#kurslar"}>Kurslar</a></li>
                             <li><a href={"#contact"}>Kontakt</a></li>
 
-                            {user ? (
-                                    <>
-                                        <li><a>
-                                            <ul className={'user-logo-list'}>
-                                                <li><img className="user-logo" src={user_icon} alt="logo"/></li>
-                                                <li>{user}</li>
-                                            </ul>
+                            {user ? (<>
+                                    <li><a>
+                                        <ul className={'user-logo-list'}>
+                                            <li><img className="user-logo" src={user_icon} alt="logo"/></li>
+                                            <li>{user}</li>
+
+                                        </ul>
 
 
-                                        </a>
-                                        </li>
-                                        <li><Link className={'logout_button'}  onClick={handleLogout}>Logout</Link></li>
-                                    </>
-
-                                    ) : (
-                                <>
-                                    <li><Link className={'login_button'} to="/login">Login</Link></li>
-                                    <li><Link className={'login_button'} to="/signup">Register</Link></li>
+                                    </a>
+                                    </li>
+                                    <li><Link className={'logout_button'} onClick={handleLogout}>Logout</Link></li>
                                 </>
-                            )}
+
+                            ) : (<>
+                                <li><Link className={'login_button'} to="/login">Login</Link></li>
+                                <li><Link className={'login_button'} to="/signup">Register</Link></li>
+                            </>)}
                         </ul>
                     </div>
                 </div>
@@ -297,16 +302,16 @@ function Homepage() {
                 </div>
                 <div className={'kurslar-cards'}>
                     {items.map((item, index) => (<div key={item.id} className={'kurslar-card'}>
-                            <img src={item.image} alt="img"/>
-                            <p className={'kurslar-card-p1'}>{item.teacher_name}</p>
-                            <p className={'kurslar-card-p2'}>300 o'quvchi</p>
-                            <h2>{item.name}</h2>
-                            <p className={'kurslar-card-p3'}>{item.description.slice(0, 100)}</p>
-                            <p className={'kurslar-card-p4'}>{item.price}</p>
-                            <Link key={item.id} id={item.id} to={`/courses/${item.id}`}>
-                                <button className={'kurslar-card-button'}>Kirish</button>
-                            </Link>
-                        </div>))}
+                        <img src={item.image} alt="img"/>
+                        <p className={'kurslar-card-p1'}>{item.teacher_name}</p>
+                        <p className={'kurslar-card-p2'}>300 o'quvchi</p>
+                        <h2>{item.name}</h2>
+                        <p className={'kurslar-card-p3'}>{item.description.slice(0, 100)}</p>
+                        <p className={'kurslar-card-p4'}>{item.price}</p>
+                        <Link key={item.id} id={item.id} to={`/courses/${item.id}`}>
+                            <button className={'kurslar-card-button'}>Kirish</button>
+                        </Link>
+                    </div>))}
                 </div>
             </div>
             <div id={'contact'} className={'contact-forms img-background'}>
@@ -366,6 +371,7 @@ function Homepage() {
         </div>);
     }
 }
+
 export default Homepage;
 
 
