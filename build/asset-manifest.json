@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/static/css/main.74c8510e.css",
+    "main.js": "/static/js/main.77d2542f.js",
+    "static/js/787.6ee2bb3a.chunk.js": "/static/js/787.6ee2bb3a.chunk.js",
+    "static/media/kupe.mp4": "/static/media/kupe.4194ce33068fb33e2001.mp4",
+    "static/media/pc.jpg": "/static/media/pc.5560adfe52478c3d84a5.jpg",
+    "static/media/p.jpg": "/static/media/p.0356be40aec6c478a255.jpg",
+    "static/media/pxfuel (1).jpg": "/static/media/pxfuel (1).0356be40aec6c478a255.jpg",
+    "static/media/pxfuel.jpg": "/static/media/pxfuel.ebdce10baee47ab40de5.jpg",
+    "static/media/11.png": "/static/media/11.a8c0f1e11d51286206c4.png",
+    "static/media/w.jpg": "/static/media/w.6bc04afa862c59b6f065.jpg",
+    "static/media/22.png": "/static/media/22.ecaf215939cf210f96c6.png",
+    "static/media/b2.jpg": "/static/media/b2.6c22d36f4bd8cefe57da.jpg",
+    "static/media/wall.jpg": "/static/media/wall.733046ea7da7b2e9df1f.jpg",
+    "static/media/aaa.jpg": "/static/media/aaa.7b0624ccfd6d653c4b2d.jpg",
+    "static/media/bag2.jpg": "/static/media/bag2.0efbe450dd733762d8cb.jpg",
+    "static/media/eve.jpg": "/static/media/eve.bad063ce0da8fedec583.jpg",
+    "static/media/back2.jpg": "/static/media/back2.3261e91c47de7491b551.jpg",
+    "static/media/footer.jpg": "/static/media/footer.5dd9c2ffdc9dd69da5b4.jpg",
+    "static/media/q.jpg": "/static/media/q.f50cf3afab69b81f09c1.jpg",
+    "static/media/g.png": "/static/media/g.4e7fb16347dc0b07f21f.png",
+    "static/media/user.png": "/static/media/user.44ea40a3eb8dd7fed2a9.png",
+    "index.html": "/index.html",
+    "static/media/instagram.svg": "/static/media/instagram.ba01fa545155dae04a0c40b281a2c6ae.svg",
+    "static/media/twitter.svg": "/static/media/twitter.183bc134f0e103501db1320adbfc4aac.svg",
+    "static/media/telegram.svg": "/static/media/telegram.557a2fa7c3e731a1b235c277ce7dd52d.svg",
+    "static/media/facebook.svg": "/static/media/facebook.19ba143b89841a8ef5fd4fe64ad811f0.svg",
+    "static/media/envelope-solid.svg": "/static/media/envelope-solid.a9a8c84ad6d43bc769ea7a087ac4c76b.svg",
+    "main.74c8510e.css.map": "/static/css/main.74c8510e.css.map",
+    "main.77d2542f.js.map": "/static/js/main.77d2542f.js.map",
+    "787.6ee2bb3a.chunk.js.map": "/static/js/787.6ee2bb3a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.74c8510e.css",
+    "static/js/main.77d2542f.js"
+  ]
+}
