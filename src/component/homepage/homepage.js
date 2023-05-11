@@ -68,7 +68,6 @@ function Homepage() {
         localStorage.removeItem('password')
         localStorage.removeItem('email')
         setUser(null);
-
         navigate('/');
 
     };
@@ -78,9 +77,9 @@ function Homepage() {
     useEffect(() => {
         fetch(baseURL)
             .then(res => res.json())
-            .then((result) => {
+            .then((results) => {
                 setIsLoaded(true);
-                setItems(result);
+                setItems(results.results);
             }, (error) => {
                 setIsLoaded(true);
                 setError(error);
@@ -301,7 +300,10 @@ function Homepage() {
                     <button>Mobile</button>
                 </div>
                 <div className={'kurslar-cards'}>
-                    {items.map((item, index) => (<div key={item.id} className={'kurslar-card'}>
+                    {items.map((item) =>
+                        <>
+
+                        <div key={item.id} className={'kurslar-card'}>
                         <img src={item.image} alt="img"/>
                         <p className={'kurslar-card-p1'}>{item.teacher_name}</p>
                         <p className={'kurslar-card-p2'}>300 o'quvchi</p>
@@ -311,7 +313,9 @@ function Homepage() {
                         <Link key={item.id} id={item.id} to={`/courses/${item.id}`}>
                             <button className={'kurslar-card-button'}>Kirish</button>
                         </Link>
-                    </div>))}
+                    </div>
+                        </>
+                    )}
                 </div>
             </div>
             <div id={'contact'} className={'contact-forms img-background'}>

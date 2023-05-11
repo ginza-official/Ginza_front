@@ -50,9 +50,12 @@ function CourseSinglePage() {
     useEffect(() => {
         const fetchData = async () => {
             const courseResponse = await axios.get(baseURLcourse);
+            console.log(courseResponse.data);
             setCourse(courseResponse.data);
             const videosResponse = await axios.get(`http://127.0.0.1:8000/api/courses/${id}/videos/`);
+            console.log(videosResponse.data);
             setVideos(videosResponse.data);
+
         };
         fetchData();
     }, [id, baseURLcourse]);
