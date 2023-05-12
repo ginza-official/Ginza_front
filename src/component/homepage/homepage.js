@@ -1,12 +1,8 @@
-//eslint-disable
-//import styles
 import './style.css'
-//import images
 import logo from './icons/g.png'
 import ginza2 from './icons/g.png'
 import wall from './img/wall.jpg'
 import video from './video/kupe.mp4'
-// icons ######
 import telegram from './icons/telegram.svg'
 import facebook from './icons/facebook.svg'
 import instagram from './icons/instagram.svg'
@@ -30,33 +26,22 @@ import user_icon from './icons/user.png'
 import {useNavigate} from 'react-router-dom';
 
 
+
+const baseURL = "http://127.0.0.1:8000/api/courses/"
+
 function Homepage() {
-    const baseURL = "http://127.0.0.1:8000/api/courses/";
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const [items, setItems] = useState([]);
-    const navigate = useNavigate();
-    // user  qismi
     const [user, setUser] = useState(null);
-    const [authenticated, setAuthenticated] = useState(false);
+    const navigate = useNavigate();
 
 
     useEffect(() => {
         const token = localStorage.getItem('access_token');
-        const user_local = localStorage.getItem('username');
-        console.log("49   ", token)
-        console.log("50   ", user_local)
-
-        if (user_local) {
-            setUser(user_local);
-            setAuthenticated(true)
-
-        }else if (token) {
+        if (token) {
             const decodedToken = jwt_decode(token);
-            console.log(decodedToken)
-            setUser(decodedToken.name);
-            setAuthenticated(true)
-            // console.log(user)
+            setUser(decodedToken.username);
         } else {
             setUser(null);
         }
@@ -64,9 +49,6 @@ function Homepage() {
 
     const handleLogout = () => {
         localStorage.removeItem('access_token');
-        localStorage.removeItem('username')
-        localStorage.removeItem('password')
-        localStorage.removeItem('email')
         setUser(null);
         navigate('/');
 

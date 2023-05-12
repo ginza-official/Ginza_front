@@ -4,35 +4,22 @@ import '../homepage/style.css'
 import './style.css'
 import '../main.css'
 import {Link} from "react-router-dom";
-import React, {useEffect, useState} from "react";
+import React, { useState} from "react";
 import jwt_decode from "jwt-decode";
 import {useNavigate} from 'react-router-dom';
-
+const LoginUrl = 'http://127.0.0.1:8000/token/'
 
 function LoginPage() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
-    const [error, setError] = React.useState("");
-    const [isLoggedIn, setIsLoggedIn] = React.useState(false);
-    const [token, setToken] = React.useState("");
+    const [token, setToken] = useState(null);
+    const [error, setError] = useState(null);
 
-    useEffect(() => {
-        const token = localStorage.getItem('access_token');
-        if (token) {
-            setIsLoggedIn(true);
-        }
-    }, []);
-
-    const handleLogout = () => {
-        localStorage.removeItem('token');
-        setIsLoggedIn(false);
-    };
     const handleSubmit = (e) => {
         e.preventDefault();
-        // console.log('Email:', email);
-        // console.log('Password:', password);
-        fetch('http://localhost:8000/token/', {
+        console.log(email, password);
+        fetch(LoginUrl, {
             method: 'POST', headers: {
                 'Content-Type': 'application/json'
             }, body: JSON.stringify({
@@ -61,12 +48,11 @@ function LoginPage() {
             })
 
             .catch(error => {
-                setError(error.message);
                 console.log('catch error', error.message);
                 alert('Authentication failed!');
                 // Try to refresh the token if an error occurs
                 if (error.message === 'Authentication failed.') {
-                    fetch('http://localhost:8000/auth/token/refresh/', {
+                    fetch(`${LoginUrl}refresh/`, {
                         method: 'POST', headers: {
                             'Content-Type': 'application/json'
                         }, body: JSON.stringify({

@@ -5,12 +5,14 @@ import '../homepage/style.css'
 import './style.css'
 import '../main.css'
 import {Link, useNavigate} from "react-router-dom";
-import jwt_decode from "jwt-decode";
+
+const RegistrationUrl = 'http://localhost:8000/register/'
 
 
 function RegistrationPage() {
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
+    const [phone, setPhone] = useState(''); //
     const [password, setPassword] = useState('');
     const [retypePassword, setRetypePassword] = useState('');
     const navigate = useNavigate();
@@ -24,6 +26,10 @@ function RegistrationPage() {
         }
 
         if (email.trim() === '') {
+            alert('Iltimos, pochtangizni  kiriting');
+            return;
+        }
+        if (phone.trim() === '') {
             alert('Iltimos, telefon raqamingizni kiriting');
             return;
         }
@@ -38,57 +44,32 @@ function RegistrationPage() {
             return;
         }
 
-
-        // Submit registration form
-        // console.log('Username:', username);
-        // console.log('Email:', email);
-        // console.log('Password:', password);
-
-
-         fetch('http://127.0.0.1:8000/register/',{
+        fetch(RegistrationUrl, {
             method: 'POST', headers: {
                 'Content-Type': 'application/json'
             }, body: JSON.stringify({
-                name: username,
+                username: username,
                 email: email,
+                phone: phone,
                 password: password
             })
         })
             .then(response => {
                 if (response.ok) {
-                    navigate('/');
+                    navigate('/login');
                     alert("login succesfull!!!")
-                    localStorage.setItem('username', username);
-                    localStorage.setItem('email', email);
-                    localStorage.setItem('password', password);
-
                     return response.json();
                 } else {
                     throw new Error('Registration failed.');
 
                 }
             })
-
-
-            // .then(data => {
-            //     // Store the token in local storage or a cookie
-            //     console.log(data.access);
-            //     localStorage.setItem('access_token', data.access);
-            //     setToken(data.access);
-            //     console.log(jwt_decode(data.access));
-            //     navigate('/');
-            //     alert("login succesfull!!!")
-            // })
-
-
-        // Reset form fields
         setUsername('');
         setPassword('');
         setRetypePassword('');
     };
 
-    return (
-        <div className={'login'}>
+    return (<div className={'login'}>
             {/*eslint-disable*/}
             <div className="registration-page">
                 <div className="Nav">
@@ -112,9 +93,9 @@ function RegistrationPage() {
                     <h1 style={{color: 'black'}}>Registration</h1>
                     <form onSubmit={handleSubmit}>
                         <div className="form-group">
-                            <label htmlFor="fullName">Full Name</label>
+                            <label htmlFor="fullName">username</label>
                             <input
-                                type="text"
+                                type="username"
                                 id="username"
                                 value={username}
                                 placeholder={'Username'}
@@ -122,13 +103,23 @@ function RegistrationPage() {
                             />
                         </div>
                         <div className="form-group">
-                            <label htmlFor="phone">Email</label>
+                            <label htmlFor="email">email</label>
                             <input
                                 type="email"
                                 id="gmail"
                                 value={email}
                                 placeholder={'ex: ginza@gmail.com'}
                                 onChange={(event) => setEmail(event.target.value)}
+                            />
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="phone">phone</label>
+                            <input
+                                type="phone"
+                                id="phone"
+                                value={phone}
+                                placeholder={'ex: +998900046465'}
+                                onChange={(event) => setPhone(event.target.value)}
                             />
                         </div>
 

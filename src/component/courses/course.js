@@ -1,4 +1,3 @@
-//eslint-disable
 import React, {useEffect, useState} from "react";
 //import styles
 import './style.css'
@@ -18,23 +17,26 @@ import Popup from "reactjs-popup";
 import jwt_decode from "jwt-decode";
 import user_icon from "../homepage/icons/user.png";
 
+
+const CourseUrl='http://127.0.0.1:8000/api/courses/'
+
 function CourseSinglePage() {
     const [course, setCourse] = useState({});
     const [videos, setVideos] = useState([]);
     const {id} = useParams();
-    const baseURLcourse = `http://127.0.0.1:8000/api/courses/${id}`;
+    const baseURLcourse = `${CourseUrl}${id}`;
     const navigate = useNavigate();
-    // user  qismi
-    // const navigate = useNavigate();
     const [user, setUser] = useState(null);
-    const [authenticated, setAuthenticated] = useState(false);
+
+
     useEffect(() => {
         const token = localStorage.getItem('access_token');
+
         if (token) {
             const decodedToken = jwt_decode(token);
             setUser(decodedToken.username);
-            setAuthenticated(true)
-        } else {
+        }
+        else {
             setUser(null);
         }
     }, []);
@@ -52,7 +54,7 @@ function CourseSinglePage() {
             const courseResponse = await axios.get(baseURLcourse);
             console.log(courseResponse.data);
             setCourse(courseResponse.data);
-            const videosResponse = await axios.get(`http://127.0.0.1:8000/api/courses/${id}/videos/`);
+            const videosResponse = await axios.get(`${CourseUrl}${id}/videos/`);
             console.log(videosResponse.data);
             setVideos(videosResponse.data);
 
@@ -93,7 +95,7 @@ function CourseSinglePage() {
 
                                     </a>
                                     </li>
-                                    <li><Link className={'logout_button'} onClick={handleLogout}>Logout</Link></li>
+                                    <li><button className={'logout_button'} onClick={handleLogout}>Logout</button></li>
                                 </>
 
                             ) : (<>
@@ -120,7 +122,7 @@ function CourseSinglePage() {
                             <Popup open={isPopupOpen} onClose={closePopup}>
                                 <div className="popup-iframe">
                                     <iframe className={'popup-iframe_iframe'}
-                                            src={`http://www.youtube.com/embed/${buffer}`}
+                                            src={`${buffer}`}
                                             id={"player"}
                                             title={"YouTube video player"}
                                             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
